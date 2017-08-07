@@ -1,0 +1,91 @@
+<html>
+<head>
+  <h2> COURSE REGISTRATION FORM </h2>
+  <style>
+  body{
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  font-family: "Roboto",sans-serif;
+  font-size: 12pt;
+  color:white;
+  margin:auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 400px;
+  }
+  h2{
+    color:magenta;
+  }
+  input {
+      font-size: 18pt;
+      color:royalblue;
+      }
+  input:focus, textarea:focus{
+  background-color: #f4bde9;
+  color:white;
+  }
+  input:required:invalid, input:focus:invalid{
+    color:red;
+  }
+</style>
+</head>
+<body>
+  <script>
+  function name1() {
+    var fname=document.getElementById("fname").value;
+    var mname=document.getElementById("mname").value;
+    var lname=document.getElementById("lname").value;
+    //var phoneno=document.getElementById("mobno").value;
+    //var lphoneno=phoneno.length;
+    if(fname==""){
+      alert("Enter a valid first name");
+    }
+    if(lname==""){
+      alert("Enter a valid last name");
+    }
+  }
+  </script>
+  First Name:<input type="text"Id="fname"/><br>
+  Middle Name:<input type="text" Id="mname"/><br>
+  Last Name:<input type="text" Id="lname"/><br>
+  Gender:<input type="radio" name="radio1" value="male"/> Male
+  <input type="radio" name="radio1" value="female"/> Female<br>
+  Date Of Birth: <input type="date" data-date="" data-date-format="dd/mm/yyyy"/><br>
+ <date-util format="dd/mm/yyyy"></date-util>
+  Address for Communication:<br>
+ <input type="text"Id="line1"/><br>
+ <input type="text"Id="line2"/><br>
+ <input type="text"Id="line3"/><br>
+ City:<select id="City" name="City">
+     <option value="empty" selected="selected"></option>
+     <option value="chicago">Chicago</option>
+     <option value="delhi"> Delhi </option>
+     <option value="london">London</option>
+     <option value="losangeles">Los Angeles</option>
+     <option value="mumbai">Mumbai</option>
+     <option value="newyork">New York</option>
+     <option value="paris">Paris</option>
+     <option value="seoul">Seoul</option>
+     <option value="shanghai">Shangai</option>
+     <option value="tokyo">Tokyo</option>
+   </select> <br>
+ Country:<select id="Country" name="Country">
+     <option value="empty1" selected="selected"></option>
+     <option value="cal">California</option>
+     <option value="chi">China</option>
+     <option value="eng">England</option>
+     <option value="fra">France</option>
+     <option value="ind">India</option>
+     <option value="jap">Japan</option>
+     <option value="sk">South Korea</option>
+     <option value="us">United States</option>
+   </select> <br>
+  Email Address: <input type="email" required placeholder="me@example.com"/>
+  Mobile Number:<input type="text" pattern="[7-9]{1}[0-9]{9}" required placeholder="9876543210"/><br>
+  Select course: </br>
+  <input type="checkbox" name="check1" value="C/C++"/> C/C++
+  <input type="checkbox" name="check1" value="Java"/>Java
+  <input type="checkbox" name="check1" value="multimedia"/> Multimedia
+  <input type="checkbox" name="check1" value="python"/>Python <br>
+  <input type="button" onclick="name1()" value="Submit" style="margin-top:5%;margin-bottom:auto; margin-left:auto;margin-right:auto;display:block"/>
+</body>
+</html>
